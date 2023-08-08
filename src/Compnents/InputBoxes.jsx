@@ -11,7 +11,7 @@ export default function InputBoxes() {
           {arr.map((el, index) => {
             return (
               <Box
-                isChoosed={el === number}
+                ischoosed={el === number}
                 onClick={() => Setnumber(el)}
                 key={index}
               >
@@ -52,8 +52,8 @@ const Box = styled.div`
   padding: 18px 0px;
   font-family: 500;
   border: 1px solid #000;
-  background-color: ${(props)=>(props.isChoosed ? "black":"white")};
-  color: ${(props)=>(props.isChoosed && "white")};
+  background-color: ${(props)=>(props.ischoosed ? "black":"white")};
+  color: ${(props)=>(props.ischoosed && "white")};
   justify-content: center;
   align-items: center;
   &:hover{
