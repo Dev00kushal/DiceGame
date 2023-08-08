@@ -1,18 +1,22 @@
 import React, { useState } from "react";
 import "../index.css";
 import { styled } from "styled-components";
-export default function InputBoxes() {
-  const [number, Setnumber] = useState();
+export default function InputBoxes({number,Setnumber,error,SetError}) {
   const arr = [1, 2, 3, 4, 5, 6];
+  const ErrorHandler = (el)=>{
+      Setnumber(el)
+    SetError("")
+  }
   return (
     <div>
       <InputBox>
+         <p style={{color:"red"}}>{error}</p>
         <SecondContainer>
           {arr.map((el, index) => {
             return (
               <Box
                 ischoosed={el === number}
-                onClick={() => Setnumber(el)}
+                onClick={ () => ErrorHandler(el)}
                 key={index}
               >
                 {el}

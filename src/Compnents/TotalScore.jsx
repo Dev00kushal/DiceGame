@@ -1,11 +1,11 @@
 import React from "react";
 import "../index.css";
 import { styled } from "styled-components";
-function GamePlay() {
+function GamePlay({ScoreValue}) {
   return (
     <>
         <FirstContainer>
-          <h1>0</h1>
+          <h1>{ScoreValue}</h1>
           <p>Total Score</p>
         </FirstContainer>
       
