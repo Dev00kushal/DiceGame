@@ -7,5 +7,9 @@ export default function App() {
     SetGameStarted((game) => !game);
   };
 
-  return <>{GameStarted ? <SecondPage /> : <IndexPage NextPage={GameStartHandler} />}</>;
+  return (
+    <>
+      {GameStarted ? <SecondPage /> : <IndexPage NextPage={GameStartHandler} />}
+    </>
+  );
 }

@@ -1,13 +1,19 @@
 import React from 'react'
 import TotalScore  from './TotalScore.jsx'
 import InputBoxes  from './InputBoxes.jsx'
+import { styled } from "styled-components";
 const SecondPage = () => {
   return (
-    <div>
+    <Sp_wrapper>
       <TotalScore/>
       <InputBoxes/>
-    </div>
+    </Sp_wrapper>
   )
 }
 
+const Sp_wrapper = styled.div`
+display: flex;
+justify-content: space-around;
+align-items: center;
+`
 export default SecondPage
